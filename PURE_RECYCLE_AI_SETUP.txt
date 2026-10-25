@@ -1,0 +1,18 @@
+PURE RECYCLE – วิธีติดตั้งและตั้งค่า Gemini AI
+
+1) แตกไฟล์ ZIP ไปไว้ในโฟลเดอร์โปรเจกต์
+2) เปลี่ยนชื่อไฟล์ .env.example เป็น .env
+3) เปิด .env แล้วกรอกค่า PRIVATE_KEY ของกระเป๋ากลาง และ GEMINI_API_KEY ที่สร้างใหม่ใน Google AI Studio
+   - ห้ามส่ง API Key หรือ PRIVATE_KEY ให้ผู้อื่น
+   - ห้ามอัปโหลดไฟล์ .env ขึ้น GitHub หรือส่งต่อใน ZIP
+4) ค่า GEMINI_MODEL ตั้งเป็น gemini-3.8-flash ไว้แล้ว สามารถคงค่าเดิมได้
+5) เปิด Terminal ในโฟลเดอร์โปรเจกต์ แล้วรัน:
+   npm install
+   npm start
+6) เปิดหน้าเว็บ PURE RECYCLE ผ่านวิธีเดิมที่ใช้กับโปรเจกต์ และตรวจให้ RELAYER_URL ชี้ไปยัง Backend ที่กำลังทำงาน
+
+หมายเหตุ:
+- Server.js โหลด dotenv และอ่าน GEMINI_API_KEY จาก process.env อยู่แล้ว
+- API Key ใช้เฉพาะฝั่ง Backend ไม่ต้องใส่ใน HTML
+- หากเคยเผยแพร่ API Key ไปในแชตหรือที่สาธารณะ ให้ลบ/เพิกถอนคีย์เดิมใน Google AI Studio แล้วใช้คีย์ใหม่
+- หากเคยเปิดเผย PRIVATE_KEY ของกระเป๋ากลาง ควรย้ายสินทรัพย์ไปยังกระเป๋าใหม่และเปลี่ยน PRIVATE_KEY ใน .env

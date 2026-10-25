@@ -1,0 +1,21 @@
+
+# Dependencies
+node_modules/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+npm-debug.log*
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local database
+pure_recycle.db
+pure_recycle.db-shm
+pure_recycle.db-wal
