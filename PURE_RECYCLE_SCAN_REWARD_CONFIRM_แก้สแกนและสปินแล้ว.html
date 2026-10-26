@@ -356,8 +356,7 @@ function updateUI(){
   document.getElementById("hPure").textContent=state.history.reduce((t,x)=>t+(x.coin||0),0);
 }
 
-const RELAYER_URL = "http://localhost:3000"; // ต้องตรงกับ PORT ใน .env และ Server.js
-
+const RELAYER_URL = "https://pure-recycle-backend.onrender.com";
 // ดึงยอด Coin ที่แท้จริงจากฐานข้อมูลฝั่งเซิร์ฟเวอร์ มาซิงค์กับ state ที่ใช้แสดงผล
 async function syncBalance(){
   if(!account)return;
